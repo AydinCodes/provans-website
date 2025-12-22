@@ -1,0 +1,15 @@
+export { default as HeroGrid } from './HeroGrid';
+export { default as ProductTile } from './ProductTile';
+export { default as Tagline } from './Tagline';
+export { default as CompanyIntro } from './CompanyIntro';
+export { default as AwardSection } from './AwardSection';
+export { default as FeaturedProducts } from './FeaturedProducts';
+export { default as FeaturedProductCard } from './FeaturedProductCard';
+export { default as NewsSection } from './NewsSection';
+export { default as NewsCard } from './NewsCard';
+export { default as ShowroomCallout } from './ShowroomCallout';
+export { default as Partnerships } from './Partnerships';
+export { default as PartnershipCard } from './PartnershipCard';
+export { default as TradeLogos } from './TradeLogos';
+export { default as SocialFeed } from './SocialFeed';
+export { default as ClickCollect } from './ClickCollect';
