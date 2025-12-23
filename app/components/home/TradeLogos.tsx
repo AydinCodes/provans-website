@@ -11,7 +11,7 @@ const logos = [
 
 export default function TradeLogos() {
   return (
-    <section className="py-16 bg-white overflow-hidden">
+    <section className="py-20 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 mb-24">
         <p className="text-[#0061af] font-medium mb-2 uppercase tracking-wider text-sm text-center">Trusted Brands</p>
         <h2 className="text-3xl md:text-4xl font-bold text-[#231f20] text-center">

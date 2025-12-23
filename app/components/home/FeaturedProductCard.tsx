@@ -12,15 +12,15 @@ export default function FeaturedProductCard({ title, description, href, image }:
   return (
     <Link
       href={href}
-      className="group block bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+      className="group block bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
     >
-      <div className="h-64 relative">
+      <div className="h-56 relative overflow-hidden">
         {image ? (
           <Image
             src={image}
             alt={title}
             fill
-            className="object-cover"
+            className="object-cover group-hover:scale-105 transition-transform duration-500"
             unoptimized
           />
         ) : (
@@ -34,11 +34,11 @@ export default function FeaturedProductCard({ title, description, href, image }:
           </div>
         )}
       </div>
-      <div className="p-5">
-        <h3 className="text-lg font-semibold text-[#231f20] mb-2 group-hover:text-[#0061af] transition-colors">
+      <div className="p-6">
+        <h3 className="text-lg font-bold text-[#231f20] mb-2 group-hover:text-[#0061af] transition-colors">
           {title}
         </h3>
-        <p className="text-sm text-gray-600">{description}</p>
+        <p className="text-sm text-gray-600 line-clamp-2">{description}</p>
       </div>
     </Link>
   );

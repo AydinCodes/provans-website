@@ -66,7 +66,7 @@ export default function Partnerships() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-24 px-4 bg-[#231f20]">
+    <section ref={sectionRef} className="py-20 px-4 bg-[#231f20]">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <p className="text-[#0061af] font-medium mb-2 uppercase tracking-wider text-sm">More Than Just Hardware</p>

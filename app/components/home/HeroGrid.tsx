@@ -83,9 +83,9 @@ export default function HeroGrid() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-24 px-4 bg-white">
+    <section ref={sectionRef} className="py-20 px-4 bg-white">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
+        <div className="text-center mb-12">
           <p ref={subtitleRef} className="text-[#0061af] font-medium mb-3 uppercase tracking-wider text-sm">Browse Categories</p>
           <h2 ref={titleRef} className="text-4xl md:text-6xl font-bold text-[#231f20]">
             Explore Our Products
@@ -107,7 +107,7 @@ export default function HeroGrid() {
               'w-full md:w-[calc(33.333%-8px)] h-[280px]', // Small
               'w-full md:w-[calc(33.333%-8px)] h-[280px]', // Small
               'w-full md:w-[calc(33.333%-8px)] h-[280px]', // Small
-              'w-full md:w-[calc(50%-8px)] h-[320px]',     // Wide. t t
+              'w-full md:w-[calc(50%-8px)] h-[320px]',     // Wide
               'w-full md:w-[calc(50%-8px)] h-[320px]',     // Wide
             ];
             

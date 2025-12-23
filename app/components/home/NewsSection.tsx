@@ -75,9 +75,9 @@ export default function NewsSection() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-16 bg-white overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 mb-8">
-        <div className="flex items-end justify-between">
+    <section ref={sectionRef} className="py-20 bg-gray-50">
+      <div className="max-w-7xl mx-auto px-4">
+        <div className="flex items-end justify-between mb-12">
           <div>
             <p className="text-[#0061af] font-medium mb-2 uppercase tracking-wider text-sm">Latest Updates</p>
             <h2 className="text-3xl md:text-4xl font-bold text-[#231f20]">
@@ -91,46 +91,45 @@ export default function NewsSection() {
             </svg>
           </div>
         </div>
-      </div>
-      
-      <div className="flex gap-6 overflow-x-scroll snap-x snap-mandatory px-4 md:px-8 pb-4 cursor-grab active:cursor-grabbing">
-        {newsItems.map((item) => (
-          <div
-            key={item.title}
-            className="news-card-item group flex-shrink-0 w-[400px] md:w-[450px] snap-center"
-          >
-            <div className="relative h-[533px] md:h-[600px] rounded-2xl overflow-hidden bg-white shadow-lg hover:shadow-2xl transition-all duration-500">
-              {/* Portrait image with 3:4 ratio */}
-              <div className="relative h-full overflow-hidden">
-                <img
-                  src={item.image}
-                  alt={item.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                />
-                {/* Gradient overlay for text readability */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent" />
-              </div>
-              
-              {/* Text content overlaying bottom of image */}
-              <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8">
-                <span className="inline-block bg-[#0061af] text-white text-xs font-semibold px-3 py-1.5 rounded-full mb-3">
-                  {item.date}
-                </span>
-                <h3 className="text-xl md:text-2xl font-bold text-white mb-2 line-clamp-2">
-                  {item.title}
-                </h3>
-                <p className="text-white/90 text-sm md:text-base mb-4 line-clamp-2">{item.excerpt}</p>
+        
+        {/* Masonry-style grid that respects image heights */}
+        <div className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
+          {newsItems.map((item) => (
+            <div
+              key={item.title}
+              className="news-card-item group break-inside-avoid"
+            >
+              <div className="rounded-2xl overflow-hidden bg-white shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                {/* Image - natural height */}
+                <div className="overflow-hidden">
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="w-full h-auto group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
                 
-                <div className="inline-flex items-center gap-2 text-white font-semibold">
-                  <span className="text-sm">Read More</span>
-                  <svg className="w-4 h-4 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                  </svg>
+                {/* Text content below image */}
+                <div className="p-6">
+                  <span className="inline-block bg-[#0061af] text-white text-xs font-semibold px-3 py-1.5 rounded-full mb-3">
+                    {item.date}
+                  </span>
+                  <h3 className="text-lg md:text-xl font-bold text-[#231f20] mb-2 group-hover:text-[#0061af] transition-colors">
+                    {item.title}
+                  </h3>
+                  <p className="text-gray-600 text-sm mb-4">{item.excerpt}</p>
+                  
+                  <div className="inline-flex items-center gap-2 text-[#231f20] font-medium group-hover:text-[#0061af] transition-colors">
+                    <span className="text-sm">Read More</span>
+                    <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   );
