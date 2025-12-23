@@ -1,6 +1,5 @@
 import { 
   HeroGrid, 
-  Tagline, 
   CompanyIntro, 
   FeaturedProducts,
   NewsSection,
@@ -14,7 +13,6 @@ export default function Home() {
   return (
     <>
       <HeroGrid />
-      <Tagline />
       <CompanyIntro />
       <FeaturedProducts />
       <NewsSection />

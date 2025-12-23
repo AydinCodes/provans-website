@@ -53,22 +53,22 @@ export default function FeaturedProducts() {
     if (!sectionRef.current) return;
 
     const ctx = gsap.context(() => {
-      gsap.from('.featured-card', {
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: 'top 70%',
-          toggleActions: 'play none none none',
-        },
-        opacity: 0,
-        y: 60,
-        scale: 0.95,
-        stagger: {
-          amount: 0.5,
-          from: 'start',
-          ease: 'power2.out',
-        },
-        duration: 0.6,
-        ease: 'power3.out',
+      const cards = gsap.utils.toArray('.featured-card');
+      
+      cards.forEach((card: any, i) => {
+        gsap.from(card, {
+          scrollTrigger: {
+            trigger: card,
+            start: 'top 90%',
+            once: true,
+          },
+          opacity: 0,
+          y: 60,
+          scale: 0.95,
+          duration: 0.6,
+          delay: i * 0.1,
+          ease: 'power3.out',
+        });
       });
     }, sectionRef);
 

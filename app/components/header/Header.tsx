@@ -15,8 +15,14 @@ export default function Header() {
     <>
       <header className="sticky top-0 z-50 bg-[#231f20]">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="flex items-center justify-between h-28">
-            <Logo />
+          <div className="flex items-center justify-between lg:justify-between h-28">
+            <div className="lg:hidden">
+              <MobileMenuButton onClick={() => setIsMobileMenuOpen(true)} />
+            </div>
+            
+            <div className="absolute left-1/2 -translate-x-1/2 lg:static lg:translate-x-0">
+              <Logo />
+            </div>
             
             <nav className="hidden lg:flex items-center gap-6">
               <NavLink href="/">Home</NavLink>
@@ -36,7 +42,7 @@ export default function Header() {
               />
             </div>
 
-            <MobileMenuButton onClick={() => setIsMobileMenuOpen(true)} />
+            <div className="lg:hidden w-10"></div>
           </div>
         </div>
       </header>

@@ -13,10 +13,12 @@ body {
   background: var(--color-white);
   color: var(--color-primary);
   font-family: var(--font-sans), system-ui, sans-serif;
+  overscroll-behavior-y: none;
 }
 
 html {
   scroll-behavior: smooth;
+  overscroll-behavior-y: none;
 }
 
 * {

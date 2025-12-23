@@ -37,11 +37,18 @@ export default function Footer() {
             <p className="text-gray-400 text-sm mb-6">
               Independent, family-owned timber yard, hardware store and showroom serving Melbourne since 1903.
             </p>
-            <img
-              src="/mitre-10-logo.png"
-              alt="Mitre 10"
-              className="w-32 h-auto"
-            />
+            <div className="flex flex-col gap-4">
+              <img
+                src="/provans-logo.png"
+                alt="Provans Timber & Hardware"
+                className="w-40 h-auto"
+              />
+              <img
+                src="/mitre-10-logo.png"
+                alt="Mitre 10"
+                className="w-32 h-auto"
+              />
+            </div>
           </div>
         </div>
         <FooterBottom />

@@ -48,6 +48,11 @@ export default function TradeLogos() {
         .animate-scroll {
           animation: scroll 30s linear infinite;
         }
+        @media (max-width: 768px) {
+          .animate-scroll {
+            animation: scroll 20s linear infinite;
+          }
+        }
       `}</style>
     </section>
   );

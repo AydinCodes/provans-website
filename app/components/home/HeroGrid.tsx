@@ -54,7 +54,7 @@ export default function HeroGrid() {
         gsap.from(card, {
           scrollTrigger: {
             trigger: card,
-            start: 'top 85%',
+            start: 'top bottom',
             once: true,
           },
           opacity: 0,
@@ -107,7 +107,7 @@ export default function HeroGrid() {
               'w-full md:w-[calc(33.333%-8px)] h-[280px]', // Small
               'w-full md:w-[calc(33.333%-8px)] h-[280px]', // Small
               'w-full md:w-[calc(33.333%-8px)] h-[280px]', // Small
-              'w-full md:w-[calc(50%-8px)] h-[320px]',     // Wide
+              'w-full md:w-[calc(50%-8px)] h-[320px]',     // Wide. t t
               'w-full md:w-[calc(50%-8px)] h-[320px]',     // Wide
             ];
             

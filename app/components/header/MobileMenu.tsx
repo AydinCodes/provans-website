@@ -88,13 +88,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
           ))}
         </nav>
         <div className="absolute bottom-0 left-0 right-0 p-4 border-t border-gray-200 space-y-3">
-          <div className="flex justify-center">
-            <img
-              src="/mitre-10-logo.png"
-              alt="Mitre 10"
-              className="w-32 h-auto opacity-80"
-            />
-          </div>
+       
           <a
             href="tel:0394898255"
             className="block w-full text-center bg-[#231f20] text-white py-3 rounded-md font-medium hover:bg-[#3a3536] transition-colors"
