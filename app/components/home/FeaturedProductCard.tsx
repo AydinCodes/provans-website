@@ -1,17 +1,15 @@
-import Link from 'next/link';
 import Image from 'next/image';
 
 interface FeaturedProductCardProps {
   title: string;
   description: string;
-  href: string;
+  href?: string;
   image?: string;
 }
 
 export default function FeaturedProductCard({ title, description, href, image }: FeaturedProductCardProps) {
   return (
-    <Link
-      href={href}
+    <div
       className="group block bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
     >
       <div className="h-56 relative overflow-hidden">
@@ -40,6 +38,6 @@ export default function FeaturedProductCard({ title, description, href, image }:
         </h3>
         <p className="text-sm text-gray-600 line-clamp-2">{description}</p>
       </div>
-    </Link>
+    </div>
   );
 }

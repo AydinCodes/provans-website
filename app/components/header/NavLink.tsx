@@ -1,4 +1,4 @@
-// import Link from 'next/link';
+import Link from 'next/link';
 
 interface NavLinkProps {
   href: string;
@@ -8,10 +8,11 @@ interface NavLinkProps {
 
 export default function NavLink({ href, children, className = '' }: NavLinkProps) {
   return (
-    <div
-      className={`text-sm font-medium text-white hover:text-[#0061af] transition-colors whitespace-nowrap ${className}`}
+    <Link
+      href={href}
+      className={`text-sm font-medium text-white hover:text-[#0061af] transition-colors whitespace-nowrap cursor-pointer ${className}`}
     >
       {children}
-    </div>
+    </Link>
   );
 }

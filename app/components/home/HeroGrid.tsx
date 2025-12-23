@@ -3,7 +3,6 @@
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import Link from 'next/link';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -112,9 +111,8 @@ export default function HeroGrid() {
             ];
             
             return (
-              <Link
+              <div
                 key={product.title}
-                href={product.href}
                 className={`product-card group relative ${sizes[index]} rounded-2xl overflow-hidden bg-gray-100 shadow-lg hover:shadow-2xl transition-all duration-500`}
               >
                 <div className="product-image absolute inset-0">
@@ -145,7 +143,7 @@ export default function HeroGrid() {
                 
                 {/* Border accent */}
                 <div className="absolute inset-0 border-2 border-[#0061af] opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl" />
-              </Link>
+              </div>
             );
           })}
         </div>
